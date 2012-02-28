@@ -151,7 +151,7 @@ function humanitarianresponse_highlight_views_default_views() {
   $handler->display->display_options['arguments']['tid']['specify_validation'] = 1;
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'funding_mechanisms' => 'funding_mechanisms',
+    'funding' => 'funding',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
   $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
