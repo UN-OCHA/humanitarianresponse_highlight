@@ -22,16 +22,15 @@ function humanitarianresponse_highlight_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Highlight';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
@@ -97,18 +96,30 @@ function humanitarianresponse_highlight_views_default_views() {
   /* Display: Cluster */
   $handler = $view->new_display('panel_pane', 'Cluster', 'panel_pane_1');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Cluster (field_highlight_cluster) */
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['id'] = 'field_highlight_cluster_tid';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['table'] = 'field_data_field_highlight_cluster';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['field'] = 'field_highlight_cluster_tid';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_highlight_cluster_tid']['not'] = 0;
-  $handler->display->display_options['pane_category']['name'] = 'Highlight panes';
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = 1;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = 0;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = 0;
+  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = 1;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'clusters' => 'clusters',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
+  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'field_highlight_cluster_tid' => array(
@@ -124,18 +135,30 @@ function humanitarianresponse_highlight_views_default_views() {
   /* Display: Funding */
   $handler = $view->new_display('panel_pane', 'Funding', 'panel_pane_2');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Funding (field_highlight_funding) */
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['id'] = 'field_highlight_funding_tid';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['table'] = 'field_data_field_highlight_funding';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['field'] = 'field_highlight_funding_tid';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_highlight_funding_tid']['not'] = 0;
-  $handler->display->display_options['pane_category']['name'] = 'Highlight panes';
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = 1;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = 0;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = 0;
+  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = 1;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'funding_mechanisms' => 'funding_mechanisms',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
+  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'field_highlight_funding_tid' => array(
@@ -162,7 +185,6 @@ function humanitarianresponse_highlight_views_default_views() {
   $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['not'] = 0;
-  $handler->display->display_options['pane_category']['name'] = 'Highlight panes';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'field_highlight_coordination_hub_tid' => array(
@@ -176,18 +198,16 @@ function humanitarianresponse_highlight_views_default_views() {
   );
   $translatables['highlight'] = array(
     t('Master'),
+    t('Highlight'),
     t('more'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
     t('Cluster'),
     t('All'),
-    t('Highlight panes'),
+    t('View panes'),
     t('Funding'),
     t('Coordination hub'),
   );
