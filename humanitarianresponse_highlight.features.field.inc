@@ -78,19 +78,19 @@ function humanitarianresponse_highlight_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '31',
+        'weight' => '1',
       ),
     ),
   );
 
-  // Exported field: 'node-highlight-field_highlight_cluster'
-  $fields['node-highlight-field_highlight_cluster'] = array(
+  // Exported field: 'node-highlight-field_clusters'
+  $fields['node-highlight-field_clusters'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_highlight_cluster',
+      'field_name' => 'field_clusters',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -127,7 +127,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'weight' => 5,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -137,30 +137,29 @@ function humanitarianresponse_highlight_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_highlight_cluster',
+      'field_name' => 'field_clusters',
       'label' => 'Cluster',
-      'required' => 0,
+      'required' => FALSE,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '33',
+        'weight' => '2',
       ),
     ),
   );
 
-  // Exported field: 'node-highlight-field_highlight_coordination_hub'
-  $fields['node-highlight-field_highlight_coordination_hub'] = array(
+  // Exported field: 'node-highlight-field_coordination_hubs'
+  $fields['node-highlight-field_coordination_hubs'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_highlight_coordination_hub',
+      'field_name' => 'field_coordination_hubs',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -197,7 +196,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 4,
+          'weight' => 7,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -207,8 +206,8 @@ function humanitarianresponse_highlight_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_highlight_coordination_hub',
-      'label' => 'Coordination Hubs',
+      'field_name' => 'field_coordination_hubs',
+      'label' => 'Coordination Hub(s)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -218,19 +217,19 @@ function humanitarianresponse_highlight_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '35',
+        'weight' => '4',
       ),
     ),
   );
 
-  // Exported field: 'node-highlight-field_highlight_funding'
-  $fields['node-highlight-field_highlight_funding'] = array(
+  // Exported field: 'node-highlight-field_fundings'
+  $fields['node-highlight-field_fundings'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_highlight_funding',
+      'field_name' => 'field_fundings',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -267,7 +266,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 3,
+          'weight' => 6,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -277,8 +276,8 @@ function humanitarianresponse_highlight_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_highlight_funding',
-      'label' => 'Funding',
+      'field_name' => 'field_fundings',
+      'label' => 'Funding(s)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -287,8 +286,8 @@ function humanitarianresponse_highlight_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '34',
+        'type' => 'options_buttons',
+        'weight' => '3',
       ),
     ),
   );
@@ -296,9 +295,9 @@ function humanitarianresponse_highlight_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Cluster');
-  t('Coordination Hubs');
+  t('Coordination Hub(s)');
   t('Description');
-  t('Funding');
+  t('Funding(s)');
 
   return $fields;
 }

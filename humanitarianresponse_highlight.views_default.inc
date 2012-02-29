@@ -174,17 +174,30 @@ function humanitarianresponse_highlight_views_default_views() {
   /* Display: Coordination hub */
   $handler = $view->new_display('panel_pane', 'Coordination hub', 'panel_pane_3');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Coordination Hubs (field_highlight_coordination_hub) */
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['id'] = 'field_highlight_coordination_hub_tid';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['table'] = 'field_data_field_highlight_coordination_hub';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['field'] = 'field_highlight_coordination_hub_tid';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['field_highlight_coordination_hub_tid']['not'] = 0;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = 1;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = 0;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = 0;
+  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = 1;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'coordination_hubs' => 'coordination_hubs',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
+  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'field_highlight_coordination_hub_tid' => array(
