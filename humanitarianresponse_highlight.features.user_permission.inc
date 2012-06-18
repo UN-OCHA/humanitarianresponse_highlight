@@ -10,7 +10,7 @@
 function humanitarianresponse_highlight_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create highlight content
+  // Exported permission: create highlight content.
   $permissions['create highlight content'] = array(
     'name' => 'create highlight content',
     'roles' => array(
@@ -19,7 +19,7 @@ function humanitarianresponse_highlight_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own highlight content
+  // Exported permission: delete own highlight content.
   $permissions['delete own highlight content'] = array(
     'name' => 'delete own highlight content',
     'roles' => array(
@@ -28,7 +28,7 @@ function humanitarianresponse_highlight_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own highlight content
+  // Exported permission: edit own highlight content.
   $permissions['edit own highlight content'] = array(
     'name' => 'edit own highlight content',
     'roles' => array(

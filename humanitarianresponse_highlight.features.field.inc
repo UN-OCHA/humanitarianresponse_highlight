@@ -10,7 +10,7 @@
 function humanitarianresponse_highlight_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-highlight-body'
+  // Exported field: 'node-highlight-body'.
   $fields['node-highlight-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -83,7 +84,7 @@ function humanitarianresponse_highlight_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-highlight-field_clusters'
+  // Exported field: 'node-highlight-field_clusters'.
   $fields['node-highlight-field_clusters'] = array(
     'field_config' => array(
       'active' => '1',
@@ -104,6 +105,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -112,6 +114,7 @@ function humanitarianresponse_highlight_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -152,7 +155,7 @@ function humanitarianresponse_highlight_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-highlight-field_coordination_hubs'
+  // Exported field: 'node-highlight-field_coordination_hubs'.
   $fields['node-highlight-field_coordination_hubs'] = array(
     'field_config' => array(
       'active' => '1',
@@ -173,6 +176,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -181,6 +185,7 @@ function humanitarianresponse_highlight_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -222,7 +227,7 @@ function humanitarianresponse_highlight_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-highlight-field_fundings'
+  // Exported field: 'node-highlight-field_fundings'.
   $fields['node-highlight-field_fundings'] = array(
     'field_config' => array(
       'active' => '1',
@@ -243,6 +248,7 @@ function humanitarianresponse_highlight_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -251,6 +257,7 @@ function humanitarianresponse_highlight_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
