@@ -130,6 +130,20 @@ function humanitarianresponse_highlight_views_default_views() {
   /* Display: Block per term */
   $handler = $view->new_display('block', 'Block per term', 'block_1');
   $handler->display->display_options['block_description'] = 'Highlight per term';
+  $translatables['highlight'] = array(
+    t('Master'),
+    t('Highlight'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('There is no highlight'),
+    t('All'),
+    t('Block per term'),
+    t('Highlight per term'),
+  );
   $export['highlight'] = $view;
 
   return $export;
