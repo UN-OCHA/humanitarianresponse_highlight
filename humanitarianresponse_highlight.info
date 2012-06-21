@@ -8,7 +8,6 @@ dependencies[] = features
 dependencies[] = humanitarianresponse_clusters
 dependencies[] = humanitarianresponse_coordination
 dependencies[] = humanitarianresponse_funding
-dependencies[] = i18n_taxonomy
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
