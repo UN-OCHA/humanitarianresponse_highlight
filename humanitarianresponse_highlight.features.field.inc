@@ -231,7 +231,7 @@ function humanitarianresponse_highlight_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_coordination_hubs',
-      'label' => 'Coordination Hub(s)',
+      'label' => 'Coordination Hub',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -642,7 +642,7 @@ function humanitarianresponse_highlight_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Cluster');
-  t('Coordination Hub(s)');
+  t('Coordination Hub');
   t('Description');
   t('Emergencies');
   t('Funding(s)');
