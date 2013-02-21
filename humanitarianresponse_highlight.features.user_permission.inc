@@ -14,7 +14,7 @@ function humanitarianresponse_highlight_user_default_permissions() {
   $permissions['create highlight content'] = array(
     'name' => 'create highlight content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -23,7 +23,7 @@ function humanitarianresponse_highlight_user_default_permissions() {
   $permissions['delete own highlight content'] = array(
     'name' => 'delete own highlight content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -32,7 +32,7 @@ function humanitarianresponse_highlight_user_default_permissions() {
   $permissions['edit own highlight content'] = array(
     'name' => 'edit own highlight content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
