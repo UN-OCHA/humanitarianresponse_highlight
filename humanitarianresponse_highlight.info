@@ -27,7 +27,6 @@ features[field_instance][] = node-highlight-field_clusters
 features[field_instance][] = node-highlight-field_coordination_hubs
 features[field_instance][] = node-highlight-field_emergencies
 features[field_instance][] = node-highlight-field_fundings
-features[field_instance][] = node-highlight-field_keywords
 features[field_instance][] = node-highlight-field_locations
 features[field_instance][] = node-highlight-field_themes
 features[field_instance][] = node-highlight-title_field
