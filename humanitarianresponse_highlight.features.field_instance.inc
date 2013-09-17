@@ -92,15 +92,18 @@ function humanitarianresponse_highlight_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_clusters',
     'label' => 'Cluster',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => 6,
     ),
   );
@@ -144,7 +147,7 @@ function humanitarianresponse_highlight_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => 0,
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 10,
@@ -189,8 +192,10 @@ function humanitarianresponse_highlight_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => 14,
     ),
   );
@@ -233,8 +238,10 @@ function humanitarianresponse_highlight_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => 8,
     ),
   );
@@ -276,9 +283,11 @@ function humanitarianresponse_highlight_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'hs_taxonomy',
-      'settings' => array(),
-      'type' => 'taxonomy_hs',
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => 4,
     ),
   );
@@ -321,8 +330,10 @@ function humanitarianresponse_highlight_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => 12,
     ),
   );
@@ -379,7 +390,6 @@ function humanitarianresponse_highlight_field_default_field_instances() {
   t('Description');
   t('Emergencies');
   t('Funding');
-  t('Keywords');
   t('Location');
   t('Themes');
   t('Title');
