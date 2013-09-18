@@ -48,6 +48,7 @@ features[variable][] = menu_parent_highlight
 features[variable][] = node_options_highlight
 features[variable][] = node_preview_highlight
 features[variable][] = node_submitted_highlight
+features[variable][] = workbench_moderation_default_state_highlight
 features[views_view][] = highlight
 l10n path = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/%core/%project/%project-%release.%language.po
 l10n server = localize.humanitarianresponse.info

@@ -95,6 +95,9 @@ function humanitarianresponse_highlight_strongarm() {
         'path' => array(
           'weight' => '50',
         ),
+        'language' => array(
+          'weight' => '5',
+        ),
       ),
       'display' => array(),
     ),
@@ -127,7 +130,8 @@ function humanitarianresponse_highlight_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_highlight';
   $strongarm->value = array(
-    0 => 'status',
+    0 => 'moderation',
+    1 => 'revision',
   );
   $export['node_options_highlight'] = $strongarm;
 
@@ -144,6 +148,13 @@ function humanitarianresponse_highlight_strongarm() {
   $strongarm->name = 'node_submitted_highlight';
   $strongarm->value = 0;
   $export['node_submitted_highlight'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_highlight';
+  $strongarm->value = 'needs_review';
+  $export['workbench_moderation_default_state_highlight'] = $strongarm;
 
   return $export;
 }
