@@ -3,6 +3,7 @@ description = HumanitarianResponse Highlight
 core = 7.x
 package = Humanitarianresponse
 dependencies[] = ctools
+dependencies[] = ds
 dependencies[] = features
 dependencies[] = hr_local_themes
 dependencies[] = hs_taxonomy
